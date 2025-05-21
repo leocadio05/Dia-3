@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Satisfy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+:root {
+    --fonte-1 : "Satisfy", cursive;
+    --fonte-2 : "Lora", serif;
+    --fonte-3 : "Playfair Display", serif;
+    --fonte-4 : "Dancing Script", cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:#520112;
+    color: #EADEC4;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+    background-image: linear-gradient(to bottom,#440512 , #4b0313 , #520112);
+    border-bottom: 1px solid #eadec4;
+    margin-bottom: 5rem;
+}
+
+header h2 {
+    padding: 0.8rem;
+    font-family: var(--fonte-3);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #B38F6F;
+    width: 43.75rem;
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+    box-shadow: 4px 3px 3px#EADEC4;
+}
+
+.texto {
+    width: 15rem;
+}
+
+.texto h1 {
+    font-family: var(--fonte-4);
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.texto p {
+    font-family: var(--fonte-1);
+    font-size: 1.3rem;
+}
+
+/* .texto p {
+    display: block;
+    width: 12.5rem;
+} */
+
+.img-principal {
+    width: 25rem;
+}
