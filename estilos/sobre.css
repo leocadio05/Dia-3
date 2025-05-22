@@ -149,3 +149,29 @@ body {
 .content .img4 {
     width: 200px;
 }
+
+.timeline-item.center {
+  width: 100%;
+  left: 0;
+  text-align: center;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-item.center::after {
+  display: none; 
+}
+
+.timeline-item.center .content {
+  border-radius: 20px;
+  width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline-item.center .content {
+    width: 100%;
+  }
+}
+
