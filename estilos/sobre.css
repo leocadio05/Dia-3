@@ -326,3 +326,63 @@ margin-top: 8px;
       font-size: 1rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .timeline {
+    padding: 1rem 0;
+  }
+
+  .timeline-item {
+    padding: 1rem 1rem 1rem 2.5rem;
+  }
+
+  .content img,
+  .content .img3,
+  .content .img4 {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .image-carousel .carousel-img {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .timeline-item.center .content {
+    width: 95%;
+  }
+
+  .card-temp {
+    width: 100%;
+  }
+
+  .timer {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .time-value {
+    font-size: 1.2rem;
+  }
+
+  .time-label {
+    font-size: 0.85rem;
+  }
+
+  .botao button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}

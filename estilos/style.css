@@ -157,3 +157,65 @@ button:hover {
         box-shadow: 0 0 0 #a70125;
       }
     }
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        width: 95%;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .texto {
+        width: 100%;
+        text-align: center;
+    }
+
+    .texto h1 {
+        font-size: 2.2rem;
+    }
+
+    .texto p {
+        font-size: 1.1rem;
+    }
+
+    .img-principal {
+        width: 100%;
+    }
+
+    .container {
+        width: 95%;
+        height: 16rem;
+        mask-image: linear-gradient(to right, transparent ,#000 15% 85% , transparent);
+    }
+
+    .item {
+        width: 8rem;
+        height: 12rem;
+        margin: 1rem;
+    }
+
+    .botao button {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto h1 {
+        font-size: 2rem;
+    }
+
+    .texto p {
+        font-size: 1rem;
+    }
+
+    .item {
+        width: 7rem;
+        height: 10rem;
+    }
+
+    .container {
+        height: 14rem;
+    }
+}
