@@ -180,6 +180,7 @@ header h1 {
 .timeline-item.center .content {
   border-radius: 20px;
   width: 60%;
+  box-shadow: 4px 4px 7px #eadec4a2
 }
 
 @media screen and (max-width: 768px) {
@@ -279,3 +280,49 @@ button:hover {
         box-shadow: 0 0 0 #a70125;
       }
     }
+
+
+.card-temp {
+  background-color: #520112;
+  color: #eadec4;
+  box-shadow: 3px 3px 5px #a70125;
+  border-radius: 0.8rem;
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+}
+
+.timer {
+  
+  width: 500px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.time-box {
+display: flex;
+flex-direction: column;
+align-items: center;
+font-weight: bold;
+}
+
+.time-value {
+font-size: 1.5rem;
+line-height: 1;
+}
+
+.time-label {
+font-size: 1.1rem;
+margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  .time-value {
+    font-size: 3rem;
+  }
+  .time-label {
+      font-size: 1rem;
+  }
+}

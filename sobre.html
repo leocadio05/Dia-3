@@ -105,7 +105,39 @@
         <div class="date">03 - 06 - 2025</div>
             <div class="content">
                 <img class="boneco" src="imagens/boneco.jpeg" alt="">
-                <h3>Hoje</h3>
+                
+                <div class="card-temp">
+                    <h3>E Hoje são </h3>
+                    <div class="timer">
+                        <div class="time-box">
+                            <div class="time-value" id="years">00</div>
+                            <div class="time-label">anos</div>
+                        </div>
+                        <div class="time-box">
+                            <div class="time-value" id="months">00</div>
+                            <div class="time-label">meses</div>
+                        </div>
+                        <div class="time-box">
+                            <div class="time-value" id="days">00</div>
+                            <div class="time-label">dias</div>
+                        </div>
+                        <div class="time-box">
+                            <div class="time-value" id="hours">00</div>
+                            <div class="time-label">horas</div>
+                        </div>
+                        <div class="time-box">
+                            <div class="time-value" id="minutes">00</div>
+                            <div class="time-label">minutos</div>
+                        </div>
+                        <div class="time-box">
+                            <div class="time-value" id="seconds">00</div>
+                            <div class="time-label">segundos</div>
+                        </div>
+                    </div>
+                    <h3>Ao seu lado e contando ...</h3>
+                </div>
+                
+                <h3>Presente</h3>
                 <p>E chegamos ao hoje , onde fazermos 1 Ano e 5 meses juntos , 517 dias juntos e foram 517 dias de alegrias , tristezas , paixões e muito amor , apesar de tudo eu não mudaria nem um dia se quer da nossa história juntos. eu te amo muito , e repito várias vezes você é todos os dias a certeza que tomei a melhor decisão de ter você ao meu lado , so tenho a agradecer !<br><br>
                  Não sei se notou mas são 5 cards com 3 fotos em cada. E algo que se mantém constante em todos eles é : Que eu estou sempre ao seu lado. E é assim que quero passar todas as minhas horas , dias , meses e anos da minha vida , ao seu lado!
                 </p>
@@ -138,6 +170,60 @@
 
     showImage(current); // Inicializa
   });
+</script>
+
+<script>
+  const startDate = new Date('2024-01-03T00:00:00');
+  const ids = ['years', 'months', 'days', 'hours', 'minutes', 'seconds'];
+
+  function getTimeParts() {
+  const now = new Date();
+
+  // Cálculo preciso de anos, meses, dias
+  let years = now.getFullYear() - startDate.getFullYear();
+  let months = now.getMonth() - startDate.getMonth();
+  let days = now.getDate() - startDate.getDate();
+
+  if (days < 0) {
+    months--;
+    const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+    days += prevMonth.getDate();
+  }
+
+  if (months < 0) {
+    months += 12;
+    years--;
+  }
+
+  // Cria a data da última virada de dia, mês e ano
+  const lastPeriod = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const midnightDiff = now - lastPeriod;
+
+  const totalSeconds = Math.floor(midnightDiff / 1000);
+  const seconds = totalSeconds % 60;
+  const totalMinutes = Math.floor(totalSeconds / 60);
+  const minutes = totalMinutes % 60;
+  const hours = Math.floor(totalMinutes / 60);
+
+  return {
+    years: String(years).padStart(2, '0'),
+    months: String(months).padStart(2, '0'),
+    days: String(days).padStart(2, '0'),
+    hours: String(hours).padStart(2, '0'),
+    minutes: String(minutes).padStart(2, '0'),
+    seconds: String(seconds).padStart(2, '0')
+  };
+}
+
+  function updateTimer() {
+    const parts = getTimeParts();
+    ids.forEach(id => {
+      document.getElementById(id).textContent = parts[id];
+    });
+  }
+
+  setInterval(updateTimer, 1000);
+  updateTimer();
 </script>
 
 </body>
