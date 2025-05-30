@@ -67,6 +67,7 @@ main {
 
 .img-principal {
     width: 25rem;
+    border-radius: 1rem;
 }
 
 .container {
@@ -118,6 +119,11 @@ main {
     display: flex;
     justify-content: center;
     padding: 1rem;
+    
+}
+
+.pulsar-bnt {
+    animation: pulsar 1.5s infinite ease-in-out;
 }
 
 .botao button {
@@ -136,3 +142,18 @@ main {
 button:hover {
     background-color: #EADEC4;
 }
+
+@keyframes pulsar {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 #a70125;
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px #a70125;
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 #a70125;
+      }
+    }
